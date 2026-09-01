@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deeksha A — Software Developer</title>
+<meta name="description" content="Deeksha A — Information Science &amp; Engineering student building web apps, IoT systems, and machine learning solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="trace" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a href="#top" class="topbar__name">Deeksha A</a>
+  <nav class="topbar__nav">
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#background">Background</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="topbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobilenav" id="mobileNav">
+  <a href="#work">Work</a>
+  <a href="#skills">Skills</a>
+  <a href="#background">Background</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Mangaluru, Karnataka</p>
+      <h1 class="hero__title">
+        Deeksha A builds systems that
+        <span class="hero__rotator"><span id="rotator">sense the real world</span><span class="hero__cursor">_</span></span>
+      </h1>
+      <p class="hero__lede">
+        Information Science &amp; Engineering student with a 9.26 CGPA, working across
+        embedded IoT, machine learning, and full-stack web development — from a
+        theft-detecting power grid to a concurrency-safe order tracker.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">See the work</a>
+        <a href="mailto:dishaajeru@gmail.com" class="btn btn--ghost">Say hello</a>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="stat">
+        <span class="stat__num">9.26</span>
+        <span class="stat__label">CGPA, B.E. ISE</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">3</span>
+        <span class="stat__label">Shipped projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">7+</span>
+        <span class="stat__label">Certifications</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="section__head">
+      <h2>Selected work</h2>
+      <p>Three projects spanning embedded hardware, distributed backends, and applied ML.</p>
+    </div>
+
+    <article class="project">
+      <div class="project__meta">
+        <span class="project__date">Feb 2026 — present</span>
+        <span class="project__tag">IoT · Machine Learning · Embedded</span>
+      </div>
+      <h3 class="project__title">Electricity Theft &amp; Loss Detection</h3>
+      <p class="project__desc">
+        An IoT-based monitoring system built on ESP32 that watches a live power line,
+        flags anomalies before they become losses, and bills automatically.
+      </p>
+      <ul class="project__points">
+        <li>Voltage and current sensors stream real-time consumption data to an ESP32 controller</li>
+        <li>Isolation Forest model flags abnormal usage patterns indicative of theft</li>
+        <li>Live web dashboard in HTML, CSS and JavaScript for monitoring electrical data</li>
+        <li>Automated billing with anomaly alerts built into the same pipeline</li>
+      </ul>
+      <div class="project__stack">
+        <span>Embedded C</span><span>ESP32</span><span>JavaScript</span><span>Isolation Forest</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project__meta">
+        <span class="project__date">Aug 2026</span>
+        <span class="project__tag">Full-stack · MERN</span>
+      </div>
+      <h3 class="project__title">Restaurant Order Tracker</h3>
+      <p class="project__desc">
+        A full-stack order tracking system built to keep a busy kitchen's order
+        states honest under concurrent updates.
+      </p>
+      <ul class="project__points">
+        <li>Backend APIs with PostgreSQL for order and menu data management</li>
+        <li>Redis layer for fast, efficient data handling under load</li>
+        <li>Concurrency-safe order status transitions so simultaneous updates never collide</li>
+        <li>Version-controlled with Git and GitHub throughout development</li>
+      </ul>
+      <div class="project__stack">
+        <span>MERN</span><span>PostgreSQL</span><span>Redis</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project__meta">
+        <span class="project__date">Aug 2025</span>
+        <span class="project__tag">Database · Web App</span>
+      </div>
+      <h3 class="project__title">Smart Appointment Scheduling System</h3>
+      <p class="project__desc">
+        A database-driven booking platform for clinics, handling patients, doctors
+        and admins from one authenticated system.
+      </p>
+      <ul class="project__points">
+        <li>MySQL schema and operations for patients, doctors and administrators</li>
+        <li>Authentication with full CRUD for booking, rescheduling and cancellation</li>
+        <li>Automated slot management that cuts down scheduling conflicts</li>
+      </ul>
+      <div class="project__stack">
+        <span>PHP</span><span>MySQL</span><span>XAMPP</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section__head">
+      <h2>Skills</h2>
+      <p>What she reaches for, grouped by where it's used.</p>
+    </div>
+    <div class="skillgrid">
+      <div class="skillgroup">
+        <h3>Programming</h3>
+        <p>Python, Java, C, C++</p>
+      </div>
+      <div class="skillgroup">
+        <h3>Web</h3>
+        <p>JavaScript, React.js, Flask, HTML, CSS, PHP</p>
+      </div>
+      <div class="skillgroup">
+        <h3>Data &amp; ML</h3>
+        <p>SQL, MySQL, Machine Learning, Generative AI, Power BI, Tableau</p>
+      </div>
+      <div class="skillgroup">
+        <h3>Systems &amp; IoT</h3>
+        <p>ESP32, Embedded C, Sensors, AWS</p>
+      </div>
+      <div class="skillgroup">
+        <h3>Foundations</h3>
+        <p>Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems</p>
+      </div>
+      <div class="skillgroup">
+        <h3>Tools</h3>
+        <p>Git, GitHub, VS Code, XAMPP</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="background">
+    <div class="section__head">
+      <h2>Background</h2>
+      <p>Education, certifications, and what she's been building outside coursework.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__item">
+        <span class="timeline__date">2023 — Present</span>
+        <h3>B.E., Information Science &amp; Engineering</h3>
+        <p>Alva's Institute of Engineering and Technology, Mijar — CGPA 9.26</p>
+      </div>
+      <div class="timeline__item">
+        <span class="timeline__date">2021 — 2023</span>
+        <h3>Pre-University, PCMC</h3>
+        <p>St. Philomena Pre University College, Puttur — 81.67%</p>
+      </div>
+      <div class="timeline__item">
+        <span class="timeline__date">2021</span>
+        <h3>SSLC</h3>
+        <p>St. Victor's Girls' High School, Puttur — 84.96%</p>
+      </div>
+    </div>
+
+    <div class="background__split">
+      <div>
+        <h3 class="background__subhead">Certifications</h3>
+        <ul class="taglist">
+          <li>Generative AI, Coursera</li>
+          <li>Generative AI Data Analytics, Coursera</li>
+          <li>Infosys Springboard — Programming Languages</li>
+          <li>NPTEL — Introduction to IoT</li>
+          <li>NPTEL — Cloud Computing</li>
+          <li>Python for Cybersecurity, Coursera</li>
+          <li>AI for Cybersecurity, Coursera</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="background__subhead">Beyond coursework</h3>
+        <ul class="taglist">
+          <li>Solved multiple LeetCode problems</li>
+          <li>Hands-on training in React.js, Flask and AWS</li>
+          <li>Data analytics training</li>
+          <li>Hackathon participation, incl. a web development hackathon</li>
+          <li>Cybersecurity club member</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--contact" id="contact">
+    <div class="section__head">
+      <h2>Get in touch</h2>
+      <p>Open to Software Developer roles — reach out directly.</p>
+    </div>
+    <div class="contactgrid">
+      <a class="contactcard" href="mailto:dishaajeru@gmail.com">
+        <span class="contactcard__label">Email</span>
+        <span class="contactcard__value">dishaajeru@gmail.com</span>
+      </a>
+      <a class="contactcard" href="tel:+917338570367">
+        <span class="contactcard__label">Phone</span>
+        <span class="contactcard__value">+91 73385 70367</span>
+      </a>
+      <a class="contactcard" href="https://www.linkedin.com/in/deeksha-a-" target="_blank" rel="noopener">
+        <span class="contactcard__label">LinkedIn</span>
+        <span class="contactcard__value">/in/deeksha-a-</span>
+      </a>
+      <a class="contactcard" href="https://github.com/dishaajeru-create" target="_blank" rel="noopener">
+        <span class="contactcard__label">GitHub</span>
+        <span class="contactcard__value">/dishaajeru-create</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Deeksha A — Mangaluru, Karnataka</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
