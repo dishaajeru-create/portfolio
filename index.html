@@ -1,257 +1,767 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deeksha A — Software Developer</title>
-<meta name="description" content="Deeksha A — Information Science &amp; Engineering student building web apps, IoT systems, and machine learning solutions.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deeksha A | Software Developer</title>
+
+    <meta name="description"
+          content="Deeksha A — Information Science & Engineering student building web applications, IoT systems and machine learning solutions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="trace" aria-hidden="true"></div>
+<!-- Background decoration -->
+<div class="background-grid"></div>
+<div class="glow glow-one"></div>
+<div class="glow glow-two"></div>
 
-<header class="topbar">
-  <a href="#top" class="topbar__name">Deeksha A</a>
-  <nav class="topbar__nav">
-    <a href="#work">Work</a>
-    <a href="#skills">Skills</a>
-    <a href="#background">Background</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button class="topbar__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+<!-- Navigation -->
+<header class="navbar">
+
+    <a href="#home" class="logo">
+        <span>D</span>
+        Deeksha A
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#background">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav-button">
+        Let's Talk <span>↗</span>
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
 </header>
 
-<nav class="mobilenav" id="mobileNav">
-  <a href="#work">Work</a>
-  <a href="#skills">Skills</a>
-  <a href="#background">Background</a>
-  <a href="#contact">Contact</a>
-</nav>
 
-<main id="top">
+<main>
 
-  <section class="hero">
-    <div class="hero__inner">
-      <p class="hero__eyebrow">Mangaluru, Karnataka</p>
-      <h1 class="hero__title">
-        Deeksha A builds systems that
-        <span class="hero__rotator"><span id="rotator">sense the real world</span><span class="hero__cursor">_</span></span>
-      </h1>
-      <p class="hero__lede">
-        Information Science &amp; Engineering student with a 9.26 CGPA, working across
-        embedded IoT, machine learning, and full-stack web development — from a
-        theft-detecting power grid to a concurrency-safe order tracker.
-      </p>
-      <div class="hero__actions">
-        <a href="#work" class="btn btn--primary">See the work</a>
-        <a href="mailto:dishaajeru@gmail.com" class="btn btn--ghost">Say hello</a>
-      </div>
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content reveal">
+
+        <div class="availability">
+            <span class="status-dot"></span>
+            Available for opportunities
+        </div>
+
+        <p class="hero-small">
+            INFORMATION SCIENCE & ENGINEERING · MANGALURU, INDIA
+        </p>
+
+        <h1>
+            Hi, I'm <span>Deeksha.</span>
+            <br>
+            I build things
+            <span class="outline-text">that matter.</span>
+        </h1>
+
+        <p class="hero-description">
+            I’m an Information Science & Engineering student with a
+            <strong>9.26 CGPA</strong>, passionate about software development,
+            machine learning, IoT and building practical solutions to real-world problems.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#work" class="primary-button">
+                Explore My Work
+                <span>↓</span>
+            </a>
+
+            <a href="mailto:dishaajeru@gmail.com" class="secondary-button">
+                Get In Touch
+                <span>↗</span>
+            </a>
+
+        </div>
+
+        <div class="social-links">
+
+            <a href="https://github.com/dishaajeru-create"
+               target="_blank"
+               rel="noopener">
+                GitHub ↗
+            </a>
+
+            <a href="https://www.linkedin.com/in/deeksha-a-"
+               target="_blank"
+               rel="noopener">
+                LinkedIn ↗
+            </a>
+
+        </div>
+
     </div>
-    <div class="hero__stats">
-      <div class="stat">
-        <span class="stat__num">9.26</span>
-        <span class="stat__label">CGPA, B.E. ISE</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">3</span>
-        <span class="stat__label">Shipped projects</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">7+</span>
-        <span class="stat__label">Certifications</span>
-      </div>
+
+
+    <!-- Hero visual -->
+
+    <div class="hero-visual reveal">
+
+        <div class="code-card">
+
+            <div class="code-top">
+                <div class="window-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span>deeksha.js</span>
+            </div>
+
+            <div class="code-content">
+
+                <p>
+                    <span class="purple">const</span>
+                    developer
+                    <span class="white">=</span>
+                    <span class="orange">{</span>
+                </p>
+
+                <p class="indent">
+                    name:
+                    <span class="green">'Deeksha A'</span>,
+                </p>
+
+                <p class="indent">
+                    role:
+                    <span class="green">'Software Developer'</span>,
+                </p>
+
+                <p class="indent">
+                    cgpa:
+                    <span class="blue">9.26</span>,
+                </p>
+
+                <p class="indent">
+                    interests:
+                    <span class="orange">[</span>
+                </p>
+
+                <p class="double-indent">
+                    <span class="green">'Web'</span>,
+                    <span class="green">'IoT'</span>,
+                </p>
+
+                <p class="double-indent">
+                    <span class="green">'ML'</span>,
+                    <span class="green">'Cloud'</span>
+                </p>
+
+                <p class="indent">
+                    <span class="orange">]</span>
+                </p>
+
+                <p>
+                    <span class="orange">}</span>
+                </p>
+
+                <p class="cursor-line">
+                    <span class="purple">→</span>
+                    turning ideas into products<span class="cursor"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="floating-card card-one">
+            <span>⚡</span>
+            IoT + ML
+        </div>
+
+        <div class="floating-card card-two">
+            <span>✦</span>
+            Problem Solver
+        </div>
+
     </div>
-  </section>
 
-  <section class="section" id="work">
-    <div class="section__head">
-      <h2>Selected work</h2>
-      <p>Three projects spanning embedded hardware, distributed backends, and applied ML.</p>
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="stat-box reveal">
+        <strong>9.26</strong>
+        <span>CGPA</span>
     </div>
 
-    <article class="project">
-      <div class="project__meta">
-        <span class="project__date">Feb 2026 — present</span>
-        <span class="project__tag">IoT · Machine Learning · Embedded</span>
-      </div>
-      <h3 class="project__title">Electricity Theft &amp; Loss Detection</h3>
-      <p class="project__desc">
-        An IoT-based monitoring system built on ESP32 that watches a live power line,
-        flags anomalies before they become losses, and bills automatically.
-      </p>
-      <ul class="project__points">
-        <li>Voltage and current sensors stream real-time consumption data to an ESP32 controller</li>
-        <li>Isolation Forest model flags abnormal usage patterns indicative of theft</li>
-        <li>Live web dashboard in HTML, CSS and JavaScript for monitoring electrical data</li>
-        <li>Automated billing with anomaly alerts built into the same pipeline</li>
-      </ul>
-      <div class="project__stack">
-        <span>Embedded C</span><span>ESP32</span><span>JavaScript</span><span>Isolation Forest</span>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project__meta">
-        <span class="project__date">Aug 2026</span>
-        <span class="project__tag">Full-stack · MERN</span>
-      </div>
-      <h3 class="project__title">Restaurant Order Tracker</h3>
-      <p class="project__desc">
-        A full-stack order tracking system built to keep a busy kitchen's order
-        states honest under concurrent updates.
-      </p>
-      <ul class="project__points">
-        <li>Backend APIs with PostgreSQL for order and menu data management</li>
-        <li>Redis layer for fast, efficient data handling under load</li>
-        <li>Concurrency-safe order status transitions so simultaneous updates never collide</li>
-        <li>Version-controlled with Git and GitHub throughout development</li>
-      </ul>
-      <div class="project__stack">
-        <span>MERN</span><span>PostgreSQL</span><span>Redis</span>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project__meta">
-        <span class="project__date">Aug 2025</span>
-        <span class="project__tag">Database · Web App</span>
-      </div>
-      <h3 class="project__title">Smart Appointment Scheduling System</h3>
-      <p class="project__desc">
-        A database-driven booking platform for clinics, handling patients, doctors
-        and admins from one authenticated system.
-      </p>
-      <ul class="project__points">
-        <li>MySQL schema and operations for patients, doctors and administrators</li>
-        <li>Authentication with full CRUD for booking, rescheduling and cancellation</li>
-        <li>Automated slot management that cuts down scheduling conflicts</li>
-      </ul>
-      <div class="project__stack">
-        <span>PHP</span><span>MySQL</span><span>XAMPP</span>
-      </div>
-    </article>
-  </section>
-
-  <section class="section" id="skills">
-    <div class="section__head">
-      <h2>Skills</h2>
-      <p>What she reaches for, grouped by where it's used.</p>
+    <div class="stat-box reveal">
+        <strong>3+</strong>
+        <span>Projects</span>
     </div>
-    <div class="skillgrid">
-      <div class="skillgroup">
-        <h3>Programming</h3>
-        <p>Python, Java, C, C++</p>
-      </div>
-      <div class="skillgroup">
-        <h3>Web</h3>
-        <p>JavaScript, React.js, Flask, HTML, CSS, PHP</p>
-      </div>
-      <div class="skillgroup">
-        <h3>Data &amp; ML</h3>
-        <p>SQL, MySQL, Machine Learning, Generative AI, Power BI, Tableau</p>
-      </div>
-      <div class="skillgroup">
-        <h3>Systems &amp; IoT</h3>
-        <p>ESP32, Embedded C, Sensors, AWS</p>
-      </div>
-      <div class="skillgroup">
-        <h3>Foundations</h3>
-        <p>Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems</p>
-      </div>
-      <div class="skillgroup">
-        <h3>Tools</h3>
-        <p>Git, GitHub, VS Code, XAMPP</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="background">
-    <div class="section__head">
-      <h2>Background</h2>
-      <p>Education, certifications, and what she's been building outside coursework.</p>
+    <div class="stat-box reveal">
+        <strong>7+</strong>
+        <span>Certifications</span>
     </div>
+
+    <div class="stat-box reveal">
+        <strong>∞</strong>
+        <span>Curiosity</span>
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section" id="work">
+
+    <div class="section-heading reveal">
+
+        <div>
+            <span class="section-number">01 / PROJECTS</span>
+
+            <h2>
+                Things I've
+                <span>built.</span>
+            </h2>
+        </div>
+
+        <p>
+            A selection of projects where I combine software,
+            data and real-world problem solving.
+        </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <!-- Project 1 -->
+
+        <article class="project-card featured reveal">
+
+            <div class="project-number">01</div>
+
+            <div class="project-icon">
+                ⚡
+            </div>
+
+            <span class="project-category">
+                IoT · MACHINE LEARNING · EMBEDDED
+            </span>
+
+            <h3>
+                Electricity Theft &
+                Loss Detection
+            </h3>
+
+            <p>
+                An IoT-based monitoring system built on ESP32 that
+                monitors live electrical consumption, identifies
+                abnormal usage patterns and generates automated alerts
+                and billing.
+            </p>
+
+            <ul>
+                <li>Real-time voltage and current monitoring</li>
+                <li>Isolation Forest anomaly detection</li>
+                <li>Live web monitoring dashboard</li>
+                <li>Automated billing and alerts</li>
+            </ul>
+
+            <div class="tech-stack">
+                <span>ESP32</span>
+                <span>Embedded C</span>
+                <span>JavaScript</span>
+                <span>Isolation Forest</span>
+            </div>
+
+            <div class="project-footer">
+                <span>FEB 2026 — PRESENT</span>
+                <span class="arrow">↗</span>
+            </div>
+
+        </article>
+
+
+        <!-- Project 2 -->
+
+        <article class="project-card reveal">
+
+            <div class="project-number">02</div>
+
+            <div class="project-icon">
+                ◈
+            </div>
+
+            <span class="project-category">
+                FULL-STACK · BACKEND
+            </span>
+
+            <h3>
+                Restaurant
+                Order Tracker
+            </h3>
+
+            <p>
+                A full-stack order tracking system designed to
+                maintain reliable order states even when multiple
+                updates happen simultaneously.
+            </p>
+
+            <ul>
+                <li>Backend APIs with PostgreSQL</li>
+                <li>Redis for fast data handling</li>
+                <li>Concurrency-safe status updates</li>
+                <li>Git and GitHub version control</li>
+            </ul>
+
+            <div class="tech-stack">
+                <span>MERN</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
+            </div>
+
+            <div class="project-footer">
+                <span>AUG 2026</span>
+                <span class="arrow">↗</span>
+            </div>
+
+        </article>
+
+
+        <!-- Project 3 -->
+
+        <article class="project-card reveal">
+
+            <div class="project-number">03</div>
+
+            <div class="project-icon">
+                ◫
+            </div>
+
+            <span class="project-category">
+                DATABASE · WEB APP
+            </span>
+
+            <h3>
+                Smart Appointment
+                Scheduling System
+            </h3>
+
+            <p>
+                A database-driven booking platform that manages
+                patients, doctors and administrators through one
+                authenticated system.
+            </p>
+
+            <ul>
+                <li>MySQL database design</li>
+                <li>Authentication and CRUD operations</li>
+                <li>Booking and cancellation</li>
+                <li>Automated slot management</li>
+            </ul>
+
+            <div class="tech-stack">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>XAMPP</span>
+            </div>
+
+            <div class="project-footer">
+                <span>AUG 2025</span>
+                <span class="arrow">↗</span>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section skills-section" id="skills">
+
+    <div class="section-heading reveal">
+
+        <div>
+            <span class="section-number">02 / SKILLS</span>
+
+            <h2>
+                My technical
+                <span>toolbox.</span>
+            </h2>
+        </div>
+
+        <p>
+            Technologies and concepts I use to turn ideas
+            into working solutions.
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-card reveal">
+            <div class="skill-card-top">
+                <span class="skill-icon">{ }</span>
+                <span>01</span>
+            </div>
+
+            <h3>Programming</h3>
+
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C</span>
+                <span>C++</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-card-top">
+                <span class="skill-icon">&lt;/&gt;</span>
+                <span>02</span>
+            </div>
+
+            <h3>Web Development</h3>
+
+            <div class="skill-tags">
+                <span>JavaScript</span>
+                <span>React.js</span>
+                <span>Flask</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>PHP</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-card-top">
+                <span class="skill-icon">◉</span>
+                <span>03</span>
+            </div>
+
+            <h3>Data & ML</h3>
+
+            <div class="skill-tags">
+                <span>SQL</span>
+                <span>MySQL</span>
+                <span>Machine Learning</span>
+                <span>Generative AI</span>
+                <span>Power BI</span>
+                <span>Tableau</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-card-top">
+                <span class="skill-icon">⚡</span>
+                <span>04</span>
+            </div>
+
+            <h3>Systems & IoT</h3>
+
+            <div class="skill-tags">
+                <span>ESP32</span>
+                <span>Embedded C</span>
+                <span>Sensors</span>
+                <span>AWS</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-card-top">
+                <span class="skill-icon">⌘</span>
+                <span>05</span>
+            </div>
+
+            <h3>Foundations</h3>
+
+            <div class="skill-tags">
+                <span>DSA</span>
+                <span>OOP</span>
+                <span>DBMS</span>
+                <span>Operating Systems</span>
+            </div>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-card-top">
+                <span class="skill-icon">◈</span>
+                <span>06</span>
+            </div>
+
+            <h3>Tools</h3>
+
+            <div class="skill-tags">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>VS Code</span>
+                <span>XAMPP</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="section background-section" id="background">
+
+    <div class="section-heading reveal">
+
+        <div>
+            <span class="section-number">03 / BACKGROUND</span>
+
+            <h2>
+                The journey
+                <span>so far.</span>
+            </h2>
+        </div>
+
+        <p>
+            Education, certifications and experiences that
+            shaped how I approach technology.
+        </p>
+
+    </div>
+
 
     <div class="timeline">
-      <div class="timeline__item">
-        <span class="timeline__date">2023 — Present</span>
-        <h3>B.E., Information Science &amp; Engineering</h3>
-        <p>Alva's Institute of Engineering and Technology, Mijar — CGPA 9.26</p>
-      </div>
-      <div class="timeline__item">
-        <span class="timeline__date">2021 — 2023</span>
-        <h3>Pre-University, PCMC</h3>
-        <p>St. Philomena Pre University College, Puttur — 81.67%</p>
-      </div>
-      <div class="timeline__item">
-        <span class="timeline__date">2021</span>
-        <h3>SSLC</h3>
-        <p>St. Victor's Girls' High School, Puttur — 84.96%</p>
-      </div>
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-year">
+                2023 — PRESENT
+            </div>
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span>B.E. · INFORMATION SCIENCE & ENGINEERING</span>
+
+                <h3>
+                    Alva's Institute of Engineering
+                    and Technology
+                </h3>
+
+                <p>
+                    Mijar · CGPA <strong>9.26</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-year">
+                2021 — 2023
+            </div>
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span>PRE-UNIVERSITY · PCMC</span>
+
+                <h3>
+                    St. Philomena Pre University College
+                </h3>
+
+                <p>
+                    Puttur · 81.67%
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-year">
+                2021
+            </div>
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span>SSLC</span>
+
+                <h3>
+                    St. Victor's Girls' High School
+                </h3>
+
+                <p>
+                    Puttur · 84.96%
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="background__split">
-      <div>
-        <h3 class="background__subhead">Certifications</h3>
-        <ul class="taglist">
-          <li>Generative AI, Coursera</li>
-          <li>Generative AI Data Analytics, Coursera</li>
-          <li>Infosys Springboard — Programming Languages</li>
-          <li>NPTEL — Introduction to IoT</li>
-          <li>NPTEL — Cloud Computing</li>
-          <li>Python for Cybersecurity, Coursera</li>
-          <li>AI for Cybersecurity, Coursera</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="background__subhead">Beyond coursework</h3>
-        <ul class="taglist">
-          <li>Solved multiple LeetCode problems</li>
-          <li>Hands-on training in React.js, Flask and AWS</li>
-          <li>Data analytics training</li>
-          <li>Hackathon participation, incl. a web development hackathon</li>
-          <li>Cybersecurity club member</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <section class="section section--contact" id="contact">
-    <div class="section__head">
-      <h2>Get in touch</h2>
-      <p>Open to Software Developer roles — reach out directly.</p>
+    <!-- Certifications -->
+
+    <div class="extra-grid">
+
+        <div class="extra-card reveal">
+
+            <span class="section-number">
+                CERTIFICATIONS
+            </span>
+
+            <h3>Learning never stops.</h3>
+
+            <div class="certificate-list">
+
+                <span>Generative AI · Coursera</span>
+                <span>Generative AI Data Analytics · Coursera</span>
+                <span>Infosys Springboard · Programming Languages</span>
+                <span>NPTEL · Introduction to IoT</span>
+                <span>NPTEL · Cloud Computing</span>
+                <span>Python for Cybersecurity · Coursera</span>
+                <span>AI for Cybersecurity · Coursera</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="extra-card reveal">
+
+            <span class="section-number">
+                BEYOND COURSEWORK
+            </span>
+
+            <h3>Curious beyond the classroom.</h3>
+
+            <div class="certificate-list">
+
+                <span>Solved multiple LeetCode problems</span>
+                <span>React.js, Flask & AWS training</span>
+                <span>Data analytics training</span>
+                <span>Hackathon participation</span>
+                <span>Cybersecurity club member</span>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="contactgrid">
-      <a class="contactcard" href="mailto:dishaajeru@gmail.com">
-        <span class="contactcard__label">Email</span>
-        <span class="contactcard__value">dishaajeru@gmail.com</span>
-      </a>
-      <a class="contactcard" href="tel:+917338570367">
-        <span class="contactcard__label">Phone</span>
-        <span class="contactcard__value">+91 73385 70367</span>
-      </a>
-      <a class="contactcard" href="https://www.linkedin.com/in/deeksha-a-" target="_blank" rel="noopener">
-        <span class="contactcard__label">LinkedIn</span>
-        <span class="contactcard__value">/in/deeksha-a-</span>
-      </a>
-      <a class="contactcard" href="https://github.com/dishaajeru-create" target="_blank" rel="noopener">
-        <span class="contactcard__label">GitHub</span>
-        <span class="contactcard__value">/dishaajeru-create</span>
-      </a>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="contact-inner reveal">
+
+        <span class="section-number">
+            04 / CONTACT
+        </span>
+
+        <h2>
+            Have an idea?
+            <br>
+            <span>Let's build it.</span>
+        </h2>
+
+        <p>
+            I'm open to Software Developer opportunities,
+            internships and interesting projects.
+        </p>
+
+        <a href="mailto:dishaajeru@gmail.com"
+           class="contact-email">
+            dishaajeru@gmail.com
+            <span>↗</span>
+        </a>
+
+        <div class="contact-links">
+
+            <a href="tel:+917338570367">
+                Phone
+                <span>+91 73385 70367</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/deeksha-a-"
+               target="_blank"
+               rel="noopener">
+                LinkedIn
+                <span>/in/deeksha-a- ↗</span>
+            </a>
+
+            <a href="https://github.com/dishaajeru-create"
+               target="_blank"
+               rel="noopener">
+                GitHub
+                <span>/dishaajeru-create ↗</span>
+            </a>
+
+        </div>
+
     </div>
-  </section>
+
+</section>
 
 </main>
 
-<footer class="footer">
-  <p>Deeksha A — Mangaluru, Karnataka</p>
+
+<footer>
+
+    <div>
+        © 2026 Deeksha A
+    </div>
+
+    <div>
+        Built with HTML · CSS · JavaScript
+    </div>
+
 </footer>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>
