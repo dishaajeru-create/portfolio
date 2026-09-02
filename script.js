@@ -1,4 +1,11 @@
-// ================= MOBILE MENU =================
+/* =========================================================
+   DEEKSHA A — PORTFOLIO INTERACTIONS
+   ========================================================= */
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
@@ -6,80 +13,175 @@ const navLinks = document.getElementById("navLinks");
 if (menuButton && navLinks) {
 
     menuButton.addEventListener("click", () => {
+
         navLinks.classList.toggle("open");
+
     });
 
 
-    navLinks.querySelectorAll("a").forEach(link => {
+    navLinks.querySelectorAll("a").forEach((link) => {
 
         link.addEventListener("click", () => {
+
             navLinks.classList.remove("open");
+
         });
 
     });
+
 }
 
 
-// ================= SCROLL REVEAL =================
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
 
 const revealElements = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
-    (entries) => {
+if (
+    revealElements.length &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
 
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver(
 
-            if (entry.isIntersecting) {
+        (entries) => {
 
-                entry.target.classList.add("visible");
+            entries.forEach((entry) => {
 
-                observer.unobserve(entry.target);
+                if (entry.isIntersecting) {
 
-            }
+                    entry.target.classList.add("visible");
 
-        });
+                    observer.unobserve(entry.target);
 
-    },
-    {
-        threshold: 0.12
-    }
-);
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
 
 
-revealElements.forEach(element => {
-    observer.observe(element);
-});
+    revealElements.forEach((element) => {
+
+        observer.observe(element);
+
+    });
+
+} else {
+
+    revealElements.forEach((element) => {
+
+        element.classList.add("visible");
+
+    });
+
+}
 
 
-// ================= ACTIVE NAVIGATION =================
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
 
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("main section[id]");
 const navigationLinks = document.querySelectorAll(".nav-links a");
 
+if (sections.length && navigationLinks.length) {
 
-window.addEventListener("scroll", () => {
+    const sectionObserver = new IntersectionObserver(
 
-    let current = "";
+        (entries) => {
 
-    sections.forEach(section => {
+            entries.forEach((entry) => {
 
-        const sectionTop = section.offsetTop;
+                if (entry.isIntersecting) {
 
-        if (window.scrollY >= sectionTop - 200) {
-            current = section.getAttribute("id");
+                    navigationLinks.forEach((link) => {
+
+                        link.classList.remove("active");
+
+                        if (
+                            link.getAttribute("href") ===
+                            `#${entry.target.id}`
+                        ) {
+
+                            link.classList.add("active");
+
+                        }
+
+                    });
+
+                }
+
+            });
+
+        },
+
+        {
+            rootMargin: "-30% 0px -60% 0px"
         }
+
+    );
+
+
+    sections.forEach((section) => {
+
+        sectionObserver.observe(section);
 
     });
 
+}
 
-    navigationLinks.forEach(link => {
 
-        link.classList.remove("active");
+/* =========================================================
+   SUBTLE HERO PARALLAX
+   ========================================================= */
 
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
+const heroVisual = document.querySelector(".hero-visual");
+
+if (
+    heroVisual &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+
+    window.addEventListener("mousemove", (event) => {
+
+        const x =
+            (event.clientX / window.innerWidth - 0.5) * 8;
+
+        const y =
+            (event.clientY / window.innerHeight - 0.5) * 8;
+
+        heroVisual.style.transform =
+            `translate(${x}px, ${y}px)`;
 
     });
+
+}
+
+
+/* =========================================================
+   CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+   ========================================================= */
+
+document.addEventListener("click", (event) => {
+
+    if (
+        navLinks &&
+        menuButton &&
+        navLinks.classList.contains("open") &&
+        !navLinks.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+
+        navLinks.classList.remove("open");
+
+    }
 
 });
