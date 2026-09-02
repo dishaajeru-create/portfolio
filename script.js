@@ -1,11 +1,6 @@
-/* =========================================================
-   DEEKSHA A — PORTFOLIO INTERACTIONS
-   ========================================================= */
-
-
-/* =========================================================
+/* =========================================
    MOBILE MENU
-   ========================================================= */
+========================================= */
 
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
@@ -14,16 +9,26 @@ if (menuButton && navLinks) {
 
     menuButton.addEventListener("click", () => {
 
-        navLinks.classList.toggle("open");
+        const isOpen = navLinks.classList.toggle("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
 
     });
 
 
-    navLinks.querySelectorAll("a").forEach((link) => {
+    navLinks.querySelectorAll("a").forEach(link => {
 
         link.addEventListener("click", () => {
 
             navLinks.classList.remove("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
         });
 
@@ -32,43 +37,47 @@ if (menuButton && navLinks) {
 }
 
 
-/* =========================================================
+/* =========================================
    SCROLL REVEAL
-   ========================================================= */
+========================================= */
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
+
 
 if (
     revealElements.length &&
-    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    "IntersectionObserver" in window
 ) {
 
-    const observer = new IntersectionObserver(
+    const observer =
+        new IntersectionObserver(
+            (entries, observer) => {
 
-        (entries) => {
+                entries.forEach(entry => {
 
-            entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
 
-                if (entry.isIntersecting) {
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
-                    entry.target.classList.add("visible");
+                        observer.unobserve(
+                            entry.target
+                        );
 
-                    observer.unobserve(entry.target);
+                    }
 
-                }
+                });
 
-            });
-
-        },
-
-        {
-            threshold: 0.12
-        }
-
-    );
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
 
-    revealElements.forEach((element) => {
+    revealElements.forEach(element => {
 
         observer.observe(element);
 
@@ -76,7 +85,7 @@ if (
 
 } else {
 
-    revealElements.forEach((element) => {
+    revealElements.forEach(element => {
 
         element.classList.add("visible");
 
@@ -85,52 +94,66 @@ if (
 }
 
 
-/* =========================================================
+/* =========================================
    ACTIVE NAVIGATION
-   ========================================================= */
+========================================= */
 
-const sections = document.querySelectorAll("main section[id]");
-const navigationLinks = document.querySelectorAll(".nav-links a");
+const sections =
+    document.querySelectorAll(
+        "main section[id]"
+    );
 
-if (sections.length && navigationLinks.length) {
-
-    const sectionObserver = new IntersectionObserver(
-
-        (entries) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-
-                    navigationLinks.forEach((link) => {
-
-                        link.classList.remove("active");
-
-                        if (
-                            link.getAttribute("href") ===
-                            `#${entry.target.id}`
-                        ) {
-
-                            link.classList.add("active");
-
-                        }
-
-                    });
-
-                }
-
-            });
-
-        },
-
-        {
-            rootMargin: "-30% 0px -60% 0px"
-        }
-
+const navItems =
+    document.querySelectorAll(
+        ".nav-links a"
     );
 
 
-    sections.forEach((section) => {
+if (
+    sections.length &&
+    navItems.length &&
+    "IntersectionObserver" in window
+) {
+
+    const sectionObserver =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        navItems.forEach(link => {
+
+                            link.classList.remove(
+                                "active"
+                            );
+
+                            if (
+                                link.getAttribute("href") ===
+                                "#" + entry.target.id
+                            ) {
+
+                                link.classList.add(
+                                    "active"
+                                );
+
+                            }
+
+                        });
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.35
+            }
+        );
+
+
+    sections.forEach(section => {
 
         sectionObserver.observe(section);
 
@@ -139,49 +162,43 @@ if (sections.length && navigationLinks.length) {
 }
 
 
-/* =========================================================
-   SUBTLE HERO PARALLAX
-   ========================================================= */
+/* =========================================
+   IMAGE LOAD CHECK
+========================================= */
 
-const heroVisual = document.querySelector(".hero-visual");
+const cartoon =
+    document.querySelector(".deeksha-cartoon");
 
-if (
-    heroVisual &&
-    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-) {
 
-    window.addEventListener("mousemove", (event) => {
+if (cartoon) {
 
-        const x =
-            (event.clientX / window.innerWidth - 0.5) * 8;
+    cartoon.addEventListener(
+        "error",
+        () => {
 
-        const y =
-            (event.clientY / window.innerHeight - 0.5) * 8;
+            console.warn(
+                "Cartoon image could not be loaded. Check that assets/deeksha-cartoon.png exists."
+            );
 
-        heroVisual.style.transform =
-            `translate(${x}px, ${y}px)`;
-
-    });
+        }
+    );
 
 }
 
 
-/* =========================================================
-   CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
-   ========================================================= */
+/* =========================================
+   YEAR
+========================================= */
 
-document.addEventListener("click", (event) => {
+const footerYear =
+    document.querySelector(".footer p");
 
-    if (
-        navLinks &&
-        menuButton &&
-        navLinks.classList.contains("open") &&
-        !navLinks.contains(event.target) &&
-        !menuButton.contains(event.target)
-    ) {
+if (footerYear) {
 
-        navLinks.classList.remove("open");
+    const currentYear =
+        new Date().getFullYear();
 
-    }
+    footerYear.textContent =
+        `© ${currentYear} Deeksha A · Built with curiosity & code.`;
 
-});
+}

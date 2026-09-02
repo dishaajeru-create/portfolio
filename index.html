@@ -24,13 +24,14 @@
 
 <body>
 
-    <!-- Background decorations -->
+    <!-- Decorative background -->
     <div class="background-shape shape-one"></div>
     <div class="background-shape shape-two"></div>
     <div class="background-shape shape-three"></div>
 
-    <!-- NAVBAR -->
+    <!-- NAVIGATION -->
     <header class="navbar">
+
         <a href="#home" class="logo">
             <span class="logo-mark">D</span>
             <span>Deeksha A</span>
@@ -38,7 +39,7 @@
 
         <nav class="nav-links" id="navLinks">
             <a href="#home">Home</a>
-            <a href="#services">Skills</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#about">About Me</a>
             <a href="#contact">Contact</a>
@@ -48,11 +49,13 @@
             class="menu-button"
             id="menuButton"
             aria-label="Open navigation menu"
+            aria-expanded="false"
         >
             <span></span>
             <span></span>
             <span></span>
         </button>
+
     </header>
 
 
@@ -61,6 +64,7 @@
 
         <section class="hero">
 
+            <!-- LEFT SIDE -->
             <div class="hero-content">
 
                 <div class="hello-text">
@@ -72,6 +76,7 @@
                 </h1>
 
                 <div class="hero-role">
+
                     <span class="role-line"></span>
 
                     <div>
@@ -85,9 +90,11 @@
                             machine learning and IoT.
                         </p>
                     </div>
+
                 </div>
 
                 <div class="hero-buttons">
+
                     <a href="#contact" class="button button-primary">
                         Let's Talk
                         <span>↗</span>
@@ -96,6 +103,7 @@
                     <a href="#projects" class="button button-secondary">
                         Explore My Work
                     </a>
+
                 </div>
 
                 <div class="hero-location">
@@ -106,82 +114,50 @@
             </div>
 
 
-            <!-- HERO VISUAL -->
+            <!-- RIGHT SIDE -->
             <div class="hero-visual">
 
+                <!-- pastel circles -->
                 <div class="soft-circle circle-large"></div>
                 <div class="soft-circle circle-small"></div>
+                <div class="soft-circle circle-third"></div>
 
-                <!-- floating code card -->
+
+                <!-- floating technology cards -->
+
                 <div class="floating-card code-card">
                     <span class="code-symbol">&lt;/&gt;</span>
                     <span>BUILD</span>
                 </div>
 
-                <!-- floating ML card -->
                 <div class="floating-card ml-card">
                     <span class="mini-icon">✦</span>
                     <span>ML</span>
                 </div>
 
-                <!-- floating IoT card -->
                 <div class="floating-card iot-card">
                     <span class="mini-icon">⌁</span>
                     <span>IoT</span>
                 </div>
 
 
-                <!-- Main developer illustration -->
+                <!-- IMAGE -->
+
                 <div class="developer-illustration">
 
                     <div class="illustration-glow"></div>
 
-                    <div class="laptop">
-                        <div class="laptop-screen">
-
-                            <div class="screen-top">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                            <div class="screen-code">
-                                <div class="code-line long"></div>
-                                <div class="code-line medium"></div>
-                                <div class="code-line short"></div>
-                                <div class="code-line medium"></div>
-                                <div class="code-line tiny"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="laptop-base"></div>
-                    </div>
-
-                    <div class="person">
-
-                        <div class="head">
-                            <div class="hair"></div>
-                            <div class="face">
-                                <span class="eye left-eye"></span>
-                                <span class="eye right-eye"></span>
-                                <span class="smile"></span>
-                            </div>
-                        </div>
-
-                        <div class="body">
-                            <div class="shirt"></div>
-                        </div>
-
-                        <div class="arm arm-left"></div>
-                        <div class="arm arm-right"></div>
-
-                    </div>
+                    <img
+                        src="assets/deeksha-cartoon.png"
+                        alt="Deeksha cartoon illustration"
+                        class="deeksha-cartoon"
+                    >
 
                 </div>
 
 
-                <!-- Hexagon skills -->
+                <!-- HEXAGON TECHNOLOGY DECORATION -->
+
                 <div class="hexagons">
 
                     <div class="hex hex-python">
@@ -212,43 +188,85 @@
 
 
         <!-- STATS -->
+
         <section class="stats-section">
 
             <div class="stats-intro">
-                <span class="small-label">A LITTLE ABOUT ME</span>
+
+                <span class="small-label">
+                    A LITTLE ABOUT ME
+                </span>
 
                 <h2>
                     Building ideas into
                     <span>real solutions.</span>
                 </h2>
+
             </div>
 
-            <div class="stat-box">
-                <div class="stat-number">9.26</div>
-                <div class="stat-label">CGPA</div>
-                <p>B.E. Information Science & Engineering</p>
-            </div>
 
             <div class="stat-box">
-                <div class="stat-number">03</div>
-                <div class="stat-label">PROJECTS</div>
-                <p>Web, IoT & Machine Learning</p>
+
+                <div class="stat-number">
+                    9.26
+                </div>
+
+                <div class="stat-label">
+                    CGPA
+                </div>
+
+                <p>
+                    B.E. Information Science & Engineering
+                </p>
+
             </div>
 
+
             <div class="stat-box">
-                <div class="stat-number">07+</div>
-                <div class="stat-label">CERTIFICATIONS</div>
-                <p>Technology & professional learning</p>
+
+                <div class="stat-number">
+                    03
+                </div>
+
+                <div class="stat-label">
+                    PROJECTS
+                </div>
+
+                <p>
+                    Web, IoT & Machine Learning
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <div class="stat-number">
+                    07+
+                </div>
+
+                <div class="stat-label">
+                    CERTIFICATIONS
+                </div>
+
+                <p>
+                    Technology & professional learning
+                </p>
+
             </div>
 
         </section>
 
 
         <!-- SKILLS -->
-        <section class="section" id="services">
+
+        <section class="section" id="skills">
 
             <div class="section-heading">
-                <span class="small-label">WHAT I WORK WITH</span>
+
+                <span class="small-label">
+                    WHAT I WORK WITH
+                </span>
 
                 <h2>
                     My <span>skills</span>
@@ -259,15 +277,21 @@
                     technologies that I use to turn ideas into working
                     applications.
                 </p>
+
             </div>
 
 
             <div class="skills-grid">
 
                 <div class="skill-card skill-card-pink reveal">
-                    <div class="skill-icon">⌘</div>
 
-                    <h3>Programming</h3>
+                    <div class="skill-icon">
+                        ⌘
+                    </div>
+
+                    <h3>
+                        Programming
+                    </h3>
 
                     <p>
                         Python, Java, C and C++ with strong foundations in
@@ -280,13 +304,19 @@
                         <span>C</span>
                         <span>C++</span>
                     </div>
+
                 </div>
 
 
                 <div class="skill-card skill-card-blue reveal">
-                    <div class="skill-icon">◇</div>
 
-                    <h3>Web Development</h3>
+                    <div class="skill-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
 
                     <p>
                         Building responsive and interactive applications
@@ -300,13 +330,19 @@
                         <span>HTML</span>
                         <span>CSS</span>
                     </div>
+
                 </div>
 
 
                 <div class="skill-card skill-card-yellow reveal">
-                    <div class="skill-icon">✦</div>
 
-                    <h3>Data & Machine Learning</h3>
+                    <div class="skill-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Data & Machine Learning
+                    </h3>
 
                     <p>
                         Working with data analysis, machine learning,
@@ -320,13 +356,19 @@
                         <span>Tableau</span>
                         <span>Gen AI</span>
                     </div>
+
                 </div>
 
 
                 <div class="skill-card skill-card-green reveal">
-                    <div class="skill-icon">⌁</div>
 
-                    <h3>Systems & IoT</h3>
+                    <div class="skill-icon">
+                        ⌁
+                    </div>
+
+                    <h3>
+                        Systems & IoT
+                    </h3>
 
                     <p>
                         Developing connected systems using embedded
@@ -339,6 +381,7 @@
                         <span>Sensors</span>
                         <span>AWS</span>
                     </div>
+
                 </div>
 
             </div>
@@ -347,16 +390,21 @@
 
 
         <!-- PROJECTS -->
+
         <section class="section projects-section" id="projects">
 
             <div class="section-heading project-heading">
 
                 <div>
-                    <span class="small-label">SELECTED WORK</span>
+
+                    <span class="small-label">
+                        SELECTED WORK
+                    </span>
 
                     <h2>
                         Things I've <span>built</span>
                     </h2>
+
                 </div>
 
                 <p>
@@ -368,7 +416,9 @@
 
             <div class="projects-list">
 
+
                 <!-- PROJECT 01 -->
+
                 <article class="project-card project-one reveal">
 
                     <div class="project-number">
@@ -411,6 +461,7 @@
 
 
                 <!-- PROJECT 02 -->
+
                 <article class="project-card project-two reveal">
 
                     <div class="project-number">
@@ -452,6 +503,7 @@
 
 
                 <!-- PROJECT 03 -->
+
                 <article class="project-card project-three reveal">
 
                     <div class="project-number">
@@ -497,6 +549,7 @@
 
 
         <!-- ABOUT -->
+
         <section class="section about-section" id="about">
 
             <div class="about-card">
@@ -509,7 +562,9 @@
 
                 <div class="about-left">
 
-                    <span class="small-label">ABOUT DEEKSHA</span>
+                    <span class="small-label">
+                        ABOUT DEEKSHA
+                    </span>
 
                     <h2>
                         Curious mind.
@@ -518,6 +573,7 @@
                     </h2>
 
                 </div>
+
 
                 <div class="about-right">
 
@@ -532,6 +588,7 @@
                         systems work and then building something useful
                         with them.
                     </p>
+
 
                     <div class="about-highlights">
 
@@ -560,11 +617,14 @@
 
 
         <!-- EDUCATION -->
+
         <section class="section education-section">
 
             <div class="section-heading">
 
-                <span class="small-label">MY JOURNEY</span>
+                <span class="small-label">
+                    MY JOURNEY
+                </span>
 
                 <h2>
                     Education & <span>learning</span>
@@ -591,7 +651,9 @@
                         Mijar
                     </p>
 
-                    <strong>CGPA — 9.26</strong>
+                    <strong>
+                        CGPA — 9.26
+                    </strong>
 
                 </div>
 
@@ -612,7 +674,9 @@
                         Puttur
                     </p>
 
-                    <strong>81.67%</strong>
+                    <strong>
+                        81.67%
+                    </strong>
 
                 </div>
 
@@ -632,7 +696,9 @@
                         Puttur
                     </p>
 
-                    <strong>84.96%</strong>
+                    <strong>
+                        84.96%
+                    </strong>
 
                 </div>
 
@@ -642,11 +708,14 @@
 
 
         <!-- CERTIFICATIONS -->
+
         <section class="section certifications-section">
 
             <div class="section-heading">
 
-                <span class="small-label">ALWAYS LEARNING</span>
+                <span class="small-label">
+                    ALWAYS LEARNING
+                </span>
 
                 <h2>
                     Certifications & <span>more</span>
@@ -698,11 +767,14 @@
 
 
         <!-- CONTACT -->
+
         <section class="contact-section" id="contact">
 
             <div class="contact-inner">
 
-                <span class="small-label">HAVE A PROJECT OR OPPORTUNITY?</span>
+                <span class="small-label">
+                    HAVE A PROJECT OR OPPORTUNITY?
+                </span>
 
                 <h2>
                     Let's create something
@@ -759,6 +831,7 @@
 
 
     <!-- FOOTER -->
+
     <footer class="footer">
 
         <div>
